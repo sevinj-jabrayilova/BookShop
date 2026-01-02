@@ -1,0 +1,29 @@
+﻿ @model QuoteUIVM
+
+@if(Model != null)
+{
+	<section id="quotation" class="align-center pb-5 mb-5">
+		<div class="inner-content">
+			<h2 class="section-title divider">Quote of the day</h2>
+			<blockquote data-aos="fade-up">
+				<q>
+					@Model.Content
+				</q>
+				<div class="author-name">@Model.Author</div>
+			</blockquote>
+		</div>
+	</section>
+}
+else
+{
+	<section id="quotation" class="align-center pb-5 mb-5">
+		<div class="inner-content">
+			<h2 class="section-title divider">Quote of the day</h2>
+			<blockquote data-aos="fade-up">
+				<q>
+					“No quote for today”
+				</q>
+			</blockquote>
+		</div>
+	</section>
+}

@@ -1,0 +1,35 @@
+﻿@model IEnumerable<SliderVM>
+<form id="antiForgeryForm">
+    @Html.AntiForgeryToken()
+</form>
+
+
+<h3>Slider</h3>
+
+<div class="mt-2 mb-3">
+    <a class="btn btn-success" asp-area="Admin" asp-controller="Slider" asp-action="Create">Create</a>
+</div>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Image</th>
+            <th scope="col">Options</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <th scope="row">
+                    <img src="~/client/assets/images/@item.Image" style="width:100px; object-fit: cover;" />
+                </th>
+                <td>
+                    <a class="btn btn-primary" asp-area="Admin" asp-controller="Slider" asp-action="Detail" asp-route-id="@item.Id">Detail</a>
+                    <a class="btn btn-warning" asp-area="Admin" asp-controller="Slider" asp-action="Edit" asp-route-id="@item.Id">Update</a>
+                    <a class="btn btn-danger delete-slider" asp-area="Admin" asp-controller="Slider" asp-action="Delete" asp-route-id="@item.Id" data-id="@item.Id">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

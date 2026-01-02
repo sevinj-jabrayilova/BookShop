@@ -1,0 +1,12 @@
+﻿@model SliderVM
+<div style="max-width:800px;margin:50px auto;border:1px solid #ddd;border-radius:10px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,0.1);">
+    <img src="~/client/assets/images/@Model.Image" alt="@Model.Title" style="width:100%;height:400px;object-fit:cover;">
+
+    <div style="padding:20px;">
+        <h2 style="margin:0 0 10px;font-size:1.8rem;font-weight:bold;">@Model.Title</h2>
+
+        <p style="margin:0 0 20px;color:#555;font-size:1.1rem;">@Model.Description</p>
+
+        <a asp-action="Index" style="padding:10px 20px;background-color:#007bff;color:#fff;border-radius:5px;text-decoration:none;">Back</a>
+    </div>
+</div>

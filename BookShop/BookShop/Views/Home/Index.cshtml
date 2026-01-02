@@ -1,0 +1,173 @@
+﻿@model HomeVM
+
+
+
+@await Component.InvokeAsync("Slider");
+
+@await Component.InvokeAsync("Brand");
+
+@await Component.InvokeAsync("Product");
+
+@await Component.InvokeAsync("BestSelling");
+
+
+<section id="popular-books" class="bookshelf py-5 my-5">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="section-header align-center">
+					<div class="title">
+						<span>Some quality items</span>
+					</div>
+					<h2 class="section-title">Popular Books</h2>
+				</div>
+
+				<ul class="tabs">
+					<li data-tab-target="#all-genre" class="active tab">All Genre</li>					
+
+					@foreach (var item in Model.Categories)
+					{
+						<li data-tab-target="#cat-@item.Id" class="tab">@item.Name</li>
+					}
+				</ul>
+
+				<div class="tab-content">
+					<div id="all-genre" data-tab-content class="active">
+						<div class="row">
+
+							@foreach (var item in Model.Products)
+							{
+								<div class="col-md-3">
+									<div class="product-item">
+										<figure class="product-style">
+											<img src="client/assets/images/@item.Image" alt="Books" class="product-item">
+											<button type="button" class="add-to-cart" data-product-tile="add-to-cart">
+												Add to
+												Cart
+											</button>
+										</figure>
+										<figcaption>
+											<h3>@item.Name</h3>
+											<span>@item.Author</span>
+											<div class="item-price">$ @item.Price</div>
+										</figcaption>
+									</div>
+								</div>
+							}
+						</div>
+					</div>
+
+					@foreach (var item in Model.Categories)
+					{
+						<div id="cat-@item.Id" data-tab-content>
+							<div class="row">
+
+								@foreach (var product in Model.Products.Where(m => m.CategoryId == item.Id))
+								{
+									<div class="col-md-3">
+										<div class="product-item">
+											<figure class="product-style">
+												<img src="client/assets/images/@product.Image" alt="Books" class="product-item">
+												<button type="button" class="add-to-cart" data-product-tile="add-to-cart">
+													Add to
+													Cart
+												</button>
+											</figure>
+											<figcaption>
+												<h3>@product.Name</h3>
+												<span>@product.Author</span>
+												<div class="item-price">$ @product.Price</div>
+											</figcaption>
+										</div>
+									</div>
+								}
+							</div>
+						</div>
+					}
+
+				</div>
+
+			</div><!--inner-tabs-->
+
+		</div>
+	</div>
+</section>
+
+@await Component.InvokeAsync("Quote");
+
+@await Component.InvokeAsync("ProductsWithOffer");
+
+<section id="subscribe">
+	<div class="container">
+		<div class="row justify-content-center">
+
+			<div class="col-md-8">
+				<div class="row">
+
+					<div class="col-md-6">
+
+						<div class="title-element">
+							<h2 class="section-title divider">Subscribe to our newsletter</h2>
+						</div>
+
+					</div>
+					<div class="col-md-6">
+
+						<div class="subscribe-content" data-aos="fade-up">
+							<p>
+								Sed eu feugiat amet, libero ipsum enim pharetra hac dolor sit amet, consectetur. Elit
+								adipiscing enim pharetra hac.
+							</p>
+							<form id="form">
+								<input type="text" name="email" placeholder="Enter your email addresss here">
+								<button class="btn-subscribe">
+									<span>send</span>
+									<i class="icon icon-send"></i>
+								</button>
+							</form>
+						</div>
+
+					</div>
+
+				</div>
+			</div>
+
+		</div>
+	</div>
+</section>
+
+@await Component.InvokeAsync("Blog");
+
+<section id="download-app" class="leaf-pattern-overlay">
+	<div class="corner-pattern-overlay"></div>
+	<div class="container">
+		<div class="row justify-content-center">
+			<div class="col-md-8">
+				<div class="row">
+
+					<div class="col-md-5">
+						<figure>
+							<img src="client/assets/images/device.png" alt="phone" class="single-image">
+						</figure>
+					</div>
+
+					<div class="col-md-7">
+						<div class="app-info">
+							<h2 class="section-title divider">Download our app now !</h2>
+							<p>
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sagittis sed ptibus
+								liberolectus nonet psryroin. Amet sed lorem posuere sit iaculis amet, ac urna.
+								Adipiscing fames semper erat ac in suspendisse iaculis.
+							</p>
+							<div class="google-app">
+								<img src="client/assets/images/google-play.jpg" alt="google play">
+								<img src="client/assets/images/app-store.jpg" alt="app store">
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

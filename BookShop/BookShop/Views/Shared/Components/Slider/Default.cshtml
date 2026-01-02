@@ -1,0 +1,45 @@
+﻿@model IEnumerable<SliderUIVM>
+
+<section id="billboard">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+
+				<button class="prev slick-arrow">
+					<i class="icon icon-arrow-left"></i>
+				</button>
+
+				<div class="main-slider pattern-overlay">
+
+					@foreach (var item in Model)
+					{
+						<div class="slider-item position-relative">
+
+							<img src="~/client/assets/images/@item.Image"
+								 alt="banner"
+								 class="banner-image w-100">
+
+							<div class="banner-content text-white">
+								<h2 class="banner-title">@item.Title</h2>
+								<p>@item.Description</p>
+
+								<div class="btn-wrap">
+									<a href="#" class="btn btn-outline-accent btn-accent-arrow">
+										Read More <i class="icon icon-ns-arrow-right"></i>
+									</a>
+								</div>
+							</div>
+
+						</div>
+					}
+
+				</div>
+
+				<button class="next slick-arrow">
+					<i class="icon icon-arrow-right"></i>
+				</button>
+
+			</div>
+		</div>
+	</div>
+</section>

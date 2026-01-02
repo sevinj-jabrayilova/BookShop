@@ -1,0 +1,42 @@
+﻿@model IEnumerable<ProductUIVM>
+
+<section id="special-offer" class="bookshelf pb-5 mb-5">
+
+	<div class="section-header align-center">
+		<div class="title">
+			<span>Grab your opportunity</span>
+		</div>
+		<h2 class="section-title">Books with offer</h2>
+	</div>
+
+	<div class="container">
+		<div class="row">
+			<div class="inner-content">
+				<div class="product-list" data-aos="fade-up">
+					<div class="grid product-grid">
+
+						@foreach (var item in Model)
+						{
+							<div class="product-item">
+								<figure class="product-style">
+									<img src="client/assets/images/@item.Image" alt="Books" class="product-item">
+									<button type="button" class="add-to-cart" data-product-tile="add-to-cart">
+										Add to
+										Cart
+									</button>
+								</figure>
+								<figcaption>
+									<h3>@item.Name</h3>
+									<span>@item.Author</span>
+									<div class="item-price">
+										<span class="prev-price">$ 50.00</span>$ @item.Price
+									</div>
+									</figcaption>
+							</div>
+						}
+					</div><!--grid-->
+				</div>
+			</div><!--inner-content-->
+		</div>
+	</div>
+</section>
