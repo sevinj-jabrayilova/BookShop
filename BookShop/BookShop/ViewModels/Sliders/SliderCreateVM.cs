@@ -5,7 +5,7 @@ namespace BookShop.ViewModels.Sliders
     public class SliderCreateVM
     {
         [Required]
-        public List<IFormFile> NewImages { get; set; }
+        public IEnumerable<IFormFile> NewImages { get; set; }
         [Required]
         public string Title { get; set; }
         [Required]
