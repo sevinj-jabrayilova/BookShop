@@ -414,7 +414,18 @@ wwwroot\client\assets\icomoon\fonts\icomoon.woff
 wwwroot\client\assets\icomoon\icomoon.css
 wwwroot\client\assets\icomoon\Read Me.txt
 wwwroot\client\assets\icomoon\selection.json
+wwwroot\client\assets\images\09781202-eec7-439b-bda7-299bfb9ed056-Снимок экрана (26).png
+wwwroot\client\assets\images\16320329-686a-47a4-aec3-bc0b7f5cffb7-Снимок экрана (95).png
+wwwroot\client\assets\images\23d6a3a9-28fd-4ec8-a1c7-4f2169b3f334-Снимок экрана (10).png
+wwwroot\client\assets\images\25e4d2eb-016b-45bb-a826-ccfce3bb1b13-Снимок экрана (95).png
+wwwroot\client\assets\images\265a1562-08f6-4ee3-80fa-e1467a33b9da-Снимок экрана (10).png
+wwwroot\client\assets\images\438d623c-daa5-49fe-a189-e6021d4139e2-Снимок экрана (30).png
+wwwroot\client\assets\images\7aefced2-49ff-42fa-b3a9-fd80a5d0baa1-Снимок экрана (28).png
+wwwroot\client\assets\images\7dbe7ada-d07a-4e36-bca5-f7029927289a-Снимок экрана (30).png
+wwwroot\client\assets\images\a3aeeae0-d4bc-4402-ae74-1d50d9da9440-Снимок экрана (31).png
 wwwroot\client\assets\images\app-store.jpg
+wwwroot\client\assets\images\b02e8ec4-9ea2-414e-bbbb-2b1ea452e1aa-Снимок экрана (30).png
+wwwroot\client\assets\images\c6f47ec7-5887-45fb-aecf-d5368a45331f-Снимок экрана (95).png
 wwwroot\client\assets\images\chocolat\close.png
 wwwroot\client\assets\images\chocolat\fullscreen-black.png
 wwwroot\client\assets\images\chocolat\fullscreen.png
@@ -527,10 +538,3 @@ wwwroot\lib\jquery\dist\jquery.js
 wwwroot\lib\jquery\dist\jquery.min.js
 wwwroot\lib\jquery\dist\jquery.min.map
 wwwroot\lib\jquery\LICENSE.txt
-wwwroot\client\assets\images\16320329-686a-47a4-aec3-bc0b7f5cffb7-Снимок экрана (95).png
-wwwroot\client\assets\images\25e4d2eb-016b-45bb-a826-ccfce3bb1b13-Снимок экрана (95).png
-wwwroot\client\assets\images\09781202-eec7-439b-bda7-299bfb9ed056-Снимок экрана (26).png
-wwwroot\client\assets\images\7aefced2-49ff-42fa-b3a9-fd80a5d0baa1-Снимок экрана (28).png
-wwwroot\client\assets\images\a3aeeae0-d4bc-4402-ae74-1d50d9da9440-Снимок экрана (31).png
-wwwroot\client\assets\images\23d6a3a9-28fd-4ec8-a1c7-4f2169b3f334-Снимок экрана (10).png
-wwwroot\client\assets\images\c6f47ec7-5887-45fb-aecf-d5368a45331f-Снимок экрана (95).png

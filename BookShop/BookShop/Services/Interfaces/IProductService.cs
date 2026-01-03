@@ -10,5 +10,12 @@ namespace BookShop.Services.Interfaces
         Task<Product> GetByIdAsync(int id);
         Task<BestSellingProductUIVM> GetBestSellingProductAsync();
         Task<IEnumerable<ProductUIVM>> GetProductsWithOfferAsync(IEnumerable<int> basketProductIds);
+        Task<IEnumerable<ProductVM>> GetAllAdminAsync();
+        Task CreateAsync(ProductCreateVM model);
+        Task<ProductDetailVM?> DetailAsync(int? id);
+        Task DeleteAsync(int id);
+        Task EditAsync(int id, ProductEditVM model);
+        Task<ProductEditVM?> GetByIdAdminAsync(int id);
+        Task IsMainImage(int? id);
     }
 }

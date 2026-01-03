@@ -41,16 +41,6 @@ function menu_click() {
                 if (result.isConfirmed) {
                     var res = await DeleteSlider(id);
                     this.parentNode.parentNode.remove();
-                    var res = await DeleteSlider(id);
-
-                    if (res.ok) {
-                        this.closest("tr").remove();
-                        Swal.fire("Deleted!", "Slider silindi", "success");
-                    } else {
-                        Swal.fire("Error!", "Silinmə zamanı xəta baş verdi", "error");
-                    }
-
-
                     Swal.fire({
                         title: "Deleted!",
                         text: "Your file has been deleted.",
@@ -60,6 +50,20 @@ function menu_click() {
             });
         });
     });
+
+    async function DeleteSlider(id) {
+        const url = `/admin/slider/delete?id=${id}`;
+
+        const response = await fetch(url, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            }
+        });
+
+        const data = await response.text();
+        return data;
+    }
 
 
 

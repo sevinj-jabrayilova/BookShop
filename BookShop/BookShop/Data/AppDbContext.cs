@@ -32,7 +32,7 @@ namespace BookShop.Data
         //        .HasForeignKey(pc => pc.ProductId);
 
         //    modelBuilder.Entity<ProductCategory>()
-        //        .HasOne(pc => pc.Category)
+        //        .HasOne(pc => pc.Categories)
         //        .WithMany(c => c.ProductCategories)
         //        .HasForeignKey(pc => pc.CategoryId);
 
