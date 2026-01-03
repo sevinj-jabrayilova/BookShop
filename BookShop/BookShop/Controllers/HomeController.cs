@@ -1,8 +1,11 @@
-﻿using BookShop.Services.Interfaces;
+﻿using BookShop.Data;
+using BookShop.Models;
+using BookShop.Services.Interfaces;
 using BookShop.ViewModels;
 using BookShop.ViewModels.Baskets;
 using BookShop.ViewModels.Products;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using System.Threading.Tasks;
@@ -16,22 +19,34 @@ namespace BookShop.Controllers
         private readonly ICategoryService _categoryService;
         private readonly IProductService _productService;
         private readonly IBlogService _blogService;
+        private readonly AppDbContext _appDbContext;
+        private readonly UserManager<AppUser> _userInManager;
 
-        public HomeController(ISliderService sliderService, 
+        public HomeController(ISliderService sliderService,
                             IBrandService brandService,
                             ICategoryService categoryService,
                             IProductService productService,
-                            IBlogService blogService)
+                            IBlogService blogService,
+                            UserManager<AppUser> signInManager,
+                            AppDbContext appDbContext)
         {
             _sliderService = sliderService;
             _brandService = brandService;
             _categoryService = categoryService;
             _productService = productService;
             _blogService = blogService;
+            _userInManager = signInManager;
+            _appDbContext = appDbContext;
         }
 
         public async Task<ActionResult> Index()
         {
+            if(User.Identity.IsAuthenticated)
+            {
+                var user = await _userInManager.FindByNameAsync(User.Identity.Name);
+                ViewBag.Email = user.Email;
+            }
+
             HomeVM model = new HomeVM
             {
                 Sliders = await _sliderService.GetAllAsync(),
@@ -112,6 +127,40 @@ namespace BookShop.Controllers
             });
         }
 
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Index(string? email)
+        {
+            if (User.Identity.IsAuthenticated)
+            {
+                var user = await _userInManager.FindByNameAsync(User.Identity.Name);
 
+                Subscriber subs = new Subscriber()
+                {
+                    AppUserId = user.Id
+                };
+
+                await _appDbContext.Subscribers.AddAsync(subs);
+                await _appDbContext.SaveChangesAsync();
+
+                if (User.Identity.IsAuthenticated)
+                {
+                    ViewBag.Email = user.Email;
+                }
+
+                HomeVM model = new HomeVM
+                {
+                    Sliders = await _sliderService.GetAllAsync(),
+                    Brands = await _brandService.GetAllAsync(),
+                    Categories = await _categoryService.GetAllAsync(),
+                    Products = await _productService.GetAllAsync(),
+                    Blogs = await _blogService.GetAllAsync(),
+                };
+
+                return View(model); 
+            }
+
+            return Ok();
+        }
     }
 }

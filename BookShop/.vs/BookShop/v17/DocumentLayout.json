@@ -3,8 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\User\\Desktop\\BookShop\\BookShop\\BookShop\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C483C1E7-C2CF-4E3B-BD9B-12A55A8FDDEC}|BookShop\\BookShop.csproj|c:\\users\\user\\desktop\\bookshop\\bookshop\\bookshop\\bookshop\\views\\shared\\components\\header\\default.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{C483C1E7-C2CF-4E3B-BD9B-12A55A8FDDEC}|BookShop\\BookShop.csproj|solutionrelative:bookshop\\views\\shared\\components\\header\\default.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{C483C1E7-C2CF-4E3B-BD9B-12A55A8FDDEC}|BookShop\\BookShop.csproj|c:\\users\\user\\desktop\\bookshop\\bookshop\\bookshop\\bookshop\\services\\interfaces\\iproductservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C483C1E7-C2CF-4E3B-BD9B-12A55A8FDDEC}|BookShop\\BookShop.csproj|solutionrelative:bookshop\\services\\interfaces\\iproductservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C483C1E7-C2CF-4E3B-BD9B-12A55A8FDDEC}|BookShop\\BookShop.csproj|c:\\users\\user\\desktop\\bookshop\\bookshop\\bookshop\\bookshop\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C483C1E7-C2CF-4E3B-BD9B-12A55A8FDDEC}|BookShop\\BookShop.csproj|solutionrelative:bookshop\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C483C1E7-C2CF-4E3B-BD9B-12A55A8FDDEC}|BookShop\\BookShop.csproj|c:\\users\\user\\desktop\\bookshop\\bookshop\\bookshop\\bookshop\\views\\product\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C483C1E7-C2CF-4E3B-BD9B-12A55A8FDDEC}|BookShop\\BookShop.csproj|solutionrelative:bookshop\\views\\product\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -19,14 +27,40 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Default.cshtml",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\BookShop\\BookShop\\BookShop\\BookShop\\Views\\Shared\\Components\\Header\\Default.cshtml",
-              "RelativeDocumentMoniker": "BookShop\\Views\\Shared\\Components\\Header\\Default.cshtml",
-              "ToolTip": "C:\\Users\\User\\Desktop\\BookShop\\BookShop\\BookShop\\BookShop\\Views\\Shared\\Components\\Header\\Default.cshtml",
-              "RelativeToolTip": "BookShop\\Views\\Shared\\Components\\Header\\Default.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACMAAAAKAAAAAAAAAA==",
+              "Title": "IProductService.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\BookShop\\BookShop\\BookShop\\BookShop\\Services\\Interfaces\\IProductService.cs",
+              "RelativeDocumentMoniker": "BookShop\\Services\\Interfaces\\IProductService.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\BookShop\\BookShop\\BookShop\\BookShop\\Services\\Interfaces\\IProductService.cs",
+              "RelativeToolTip": "BookShop\\Services\\Interfaces\\IProductService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-03T10:28:32.185Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\BookShop\\BookShop\\BookShop\\BookShop\\Views\\Product\\Index.cshtml",
+              "RelativeDocumentMoniker": "BookShop\\Views\\Product\\Index.cshtml",
+              "ToolTip": "C:\\Users\\User\\Desktop\\BookShop\\BookShop\\BookShop\\BookShop\\Views\\Product\\Index.cshtml",
+              "RelativeToolTip": "BookShop\\Views\\Product\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-01-02T22:29:22.758Z",
+              "WhenOpened": "2026-01-03T10:25:51.535Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ProductController.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\BookShop\\BookShop\\BookShop\\BookShop\\Controllers\\ProductController.cs",
+              "RelativeDocumentMoniker": "BookShop\\Controllers\\ProductController.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\BookShop\\BookShop\\BookShop\\BookShop\\Controllers\\ProductController.cs",
+              "RelativeToolTip": "BookShop\\Controllers\\ProductController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-03T10:25:02.729Z",
               "EditorCaption": ""
             }
           ]

@@ -36,7 +36,7 @@ namespace BookShop.Controllers
             {
                 FullName = model.FullName,
                 Email = model.Email,
-                UserName = model.Email
+                UserName = model.UserName
             };
 
             IdentityResult result = await _userManager.CreateAsync(user, model.Password);
@@ -54,8 +54,7 @@ namespace BookShop.Controllers
             return RedirectToAction("Index", "Home");
         }
 
-        [HttpPost]
-        [ValidateAntiForgeryToken]
+        [HttpGet]
         public async Task<IActionResult> Logout()
         {
             await _signInManager.SignOutAsync();
@@ -77,7 +76,12 @@ namespace BookShop.Controllers
                 return View(model);
             }
 
-            var user = await _userManager.FindByEmailAsync(model.Email);
+            var user = await _userManager.FindByEmailAsync(model.UsernameOrEmail);
+
+            if(user is null)
+            {
+                user = await _userManager.FindByNameAsync(model.UsernameOrEmail);
+            }
 
             if (user is null)
             {

@@ -14,7 +14,7 @@ namespace BookShop.Services
         }
         public async Task<IEnumerable<CategoryUIVM>> GetAllAsync()
         {
-            return await _context.Categories.Include(m => m.Products).Where(m => m.Products.Count != 0).Select(c => new CategoryUIVM
+            return await _context.Categories.Select(c => new CategoryUIVM
             {
                 Id = c.Id,
                 Name = c.Name

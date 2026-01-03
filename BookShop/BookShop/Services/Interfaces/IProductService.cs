@@ -6,7 +6,7 @@ namespace BookShop.Services.Interfaces
 {
     public interface IProductService
     {
-        Task<IEnumerable<ProductUIVM>> GetAllAsync();
+        Task<IEnumerable<ProductGroupByCategoryVM>> GetAllAsync();
         Task<Product> GetByIdAsync(int id);
         Task<BestSellingProductUIVM> GetBestSellingProductAsync();
         Task<IEnumerable<ProductUIVM>> GetProductsWithOfferAsync(IEnumerable<int> basketProductIds);

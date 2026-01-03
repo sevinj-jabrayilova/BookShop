@@ -58,29 +58,28 @@
                     </div>
                     <div class="card sm:my-12  w-full shadow-none">
                         <div class="card-body !p-10">
-                            <h4 class="text-center font-medium mb-4">Login</h4>
-                            <div class="mb-3">
-                                <input type="email" class="form-control" id="floatingInput" placeholder="Email Address" />
-                            </div>
-                            <div class="mb-4">
-                                <input type="password" class="form-control" id="floatingInput1" placeholder="Password" />
-                            </div>
-                            <div class="flex mt-1 justify-between items-center flex-wrap">
-                                <div class="form-check">
-                                    <input class="form-check-input input-primary" type="checkbox" id="customCheckc1" checked="" />
-                                    <label class="form-check-label text-muted" for="customCheckc1">Remember me?</label>
+                            <form method="post">
+                                <h4 class="text-center font-medium mb-4">Login</h4>
+                                <div class="mb-3">
+                                    <input asp-for="UsernameOrEmail" class="form-control" id="floatingInput" placeholder="Email Address" />
                                 </div>
-                                <h6 class="font-normal text-primary-500 mb-0">
-                                    <a href="#"> Forgot Password? </a>
-                                </h6>
-                            </div>
-                            <div class="mt-4 text-center">
-                                <button type="button" class="btn btn-primary mx-auto shadow-2xl">Login</button>
-                            </div>
-                            <div class="flex justify-between items-end flex-wrap mt-4">
-                                <h6 class="font-medium mb-0">Don't have an Account?</h6>
-                                <a href="register-v1.html" class="text-primary-500">Create Account</a>
-                            </div>
+                                <div class="mb-4">
+                                    <input asp-for="Password" class="form-control" id="floatingInput1" placeholder="Password" />
+                                </div>
+                                <div class="flex mt-1 justify-between items-center flex-wrap">
+                                    <div class="form-check">
+                                        <input class="form-check-input input-primary" type="checkbox" id="customCheckc1" checked="" />
+                                        <label class="form-check-label text-muted" for="customCheckc1">Remember me?</label>
+                                    </div>
+                                </div>
+                                <div class="mt-4 text-center">
+                                    <button class="btn btn-primary">Login</button>
+                                </div>
+                                <div class="flex justify-between items-end flex-wrap mt-4">
+                                    <h6 class="font-medium mb-0">Don't have an Account?</h6>
+                                    <a asp-action="Register" class="text-primary-500">Create Account</a>
+                                </div>
+                            </form>
                         </div>
                     </div>
                 </div>

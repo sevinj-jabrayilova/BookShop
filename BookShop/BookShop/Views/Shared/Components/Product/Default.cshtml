@@ -1,4 +1,4 @@
-﻿@model IEnumerable<ProductUIVM>
+﻿@model IEnumerable<ProductGroupByCategoryVM>
 
 <section id="featured-books" class="py-5 my-5">
 	<div class="container">
@@ -15,24 +15,27 @@
 				<div class="product-list" data-aos="fade-up">
 					<div class="row">
 
-						@foreach(var item in Model)
+						@foreach(var item in Model.Take(4))
 						{
-							<div class="col-md-3">
-								<div class="product-item">
-									<figure class="product-style">
-										<img src="client/assets/images/@item.Image" alt="Books" class="product-item">
-										<span type="button" class="add-to-cart add-basket" data-id="@item.Id">
-											Add to Cart
-										</span>
+							foreach (var item2 in item.Products)
+							{
+								<div class="col-md-3">
+									<div class="product-item">
+										<figure class="product-style">
+											<img src="client/assets/images/@item2.Image" alt="Books" class="product-item">
+											<span type="button" class="add-to-cart add-basket" data-id="@item2.Id">
+												Add to Cart
+											</span>
 
-									</figure>
-									<figcaption>
-										<h3>@item.Name</h3>
-										<span>@item.Author</span>
-										<div class="item-price">$ @item.Price</div>
-									</figcaption>
+										</figure>
+										<figcaption>
+											<h3>@item2.Name</h3>
+											<span>@item2.Author</span>
+											<div class="item-price">$ @item2.Price</div>
+										</figcaption>
+									</div>
 								</div>
-							</div>
+							}
 						}
 					</div><!--ft-books-slider-->
 				</div><!--grid-->

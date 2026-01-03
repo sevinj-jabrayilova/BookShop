@@ -32,7 +32,7 @@ namespace BookShop.Controllers
             var products = await _context.Products
                 .Where(p => productIds.Contains(p.Id))
                 .Include(p => p.ProductImages)
-                .Include(p => p.Category)
+                //.Include(p => p.Category)
                 .ToListAsync();
 
             List<BasketItemVM> items = new();
@@ -48,7 +48,7 @@ namespace BookShop.Controllers
                     Name = dbProduct.Name,
                     Price = dbProduct.Price,
                     Count = basketItem.ProductCount,
-                    Category = dbProduct.Category?.Name ?? "No category",
+                    //Category = dbProduct.Category?.Name ?? "No category",
                     Image = dbProduct.ProductImages?
                         .FirstOrDefault(pi => pi.IsMain)?.Image
                 });

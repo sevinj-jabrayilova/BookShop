@@ -11,7 +11,7 @@ namespace BookShop.ViewModels
         public IEnumerable<SliderUIVM> Sliders { get; set; }
         public IEnumerable<BrandUIVM> Brands { get; set; }
         public IEnumerable<CategoryUIVM> Categories { get; set; }
-        public IEnumerable<ProductUIVM> Products { get; set; }
+        public IEnumerable<ProductGroupByCategoryVM> Products { get; set; }
         public IEnumerable<ProductUIVM> ProductsWithOffer { get; set; }
         public IEnumerable<BlogUIVM> Blogs { get; set; }
 

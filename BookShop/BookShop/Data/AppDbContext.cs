@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace BookShop.Data
 {
-    public class AppDbContext : IdentityDbContext
+    public class AppDbContext : IdentityDbContext<AppUser>
     {
         public DbSet<Setting> Settings { get; set; }
         public DbSet<Slider> Sliders { get; set; }
@@ -14,9 +14,11 @@ namespace BookShop.Data
         public DbSet<Product> Products { get; set; }
         public DbSet<ProductImage> ProductImages { get; set; }
         public DbSet<Quote> Quotes { get; set; }
-        //public DbSet<ProductCategory> ProductCategories { get; set; }
+        public DbSet<ProductCategory> ProductCategories { get; set; }
         public DbSet<Blog> Blogs { get; set; }
         public DbSet<BlogImage> BlogImages { get; set; }
+        public DbSet<Subscriber> Subscribers { get; set; }
+
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
 
         //protected override void OnModelCreating(ModelBuilder modelBuilder)
